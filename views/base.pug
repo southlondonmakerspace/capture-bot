@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		meta( charset="utf-8" )
+		link( rel="shortcut icon" href="/imgs/favicon.ico" )
+		block title
+			title #{ title }
+		block head
+			block css
+				link( rel="stylesheet", href="/css/bootstrap.min.css" )
+				link( rel="stylesheet", href="/css/style.css" )
+			block js
+				script( src="/js/jquery.js" )
+				script( src="/js/bootstrap.js" )
+	body
+		block body
+			.container
+				a( href="/" )
+					img.logo( src="/imgs/logo.png" )
+				block heading
+					if heading
+						.page-header
+							h2 #{ heading }
+				block contents
+				block footer
+					hr
+					small.text-muted Capture Bot &mdash;
+						|  
+						a( href="https://github.com/southlondonmakerspace/capture-bot", target="_blank" ) Contribute on GitHub

@@ -1,0 +1,46 @@
+extends base.pug
+
+block prepend title
+	- title = "Capture Bot"
+
+block append js
+	script( src="/js/preview.js" )
+
+block append css
+	link( rel="stylesheet", href="/css/preview.css" )
+
+block contents
+	.row
+		.col-md-6
+			.page-header
+				h1 Customise your photo
+			form( method="post" ).form-horizontal
+				.form-group
+					label( for="image" ).col-md-4 Photo
+					.col-md-8
+						input( type="file", name="image", required )#image.form-control
+				.form-group
+					label( for="firstname" ).col-md-4 First Name
+					.col-md-8
+						input( type="text", name="firstname", required )#firstname.form-control
+				.form-group
+					label( for="lastname" ).col-md-4 Last Name
+					.col-md-8
+						input( type="text", name="lastname", required )#lastname.form-control
+				.form-group
+					label( for="discourse" ).col-md-4 Discourse Username
+					.col-md-8
+						input( type="text", name="discourse", required )#discourse.form-control
+				.form-group
+					label( for="fact" ).col-md-4 Fun fact
+					.col-md-8
+						textarea( rows="4", name="fact", required )#fact.form-control
+				.form-group
+					.col-md-8.col-md-offset-4
+						button.btn.btn-primary Print
+		.col-md-6.parent
+			.preview
+				img( src="/imgs/avatar.png" ).profile
+				h1 Ava Tar
+				h2 @discursive
+				p I am a member of a social community workshop.

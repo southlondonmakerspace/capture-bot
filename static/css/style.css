@@ -1,0 +1,16 @@
+body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.logo {
+	margin-bottom: 20px;
+}
+
+.example {
+	background-image: url( /imgs/example.png );
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 450px;
+}

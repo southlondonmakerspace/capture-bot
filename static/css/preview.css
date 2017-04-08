@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
+
+.parent {
+	perspective: 1000px;
+	padding-bottom: 2em;
+}
+
+.preview {
+	background: #fafafa;
+	box-shadow: 5px 5px 10px rgba( 0, 0, 0, 0.2 );
+	width: 400px;
+	height: 600px;
+	position: relative;
+	transition: all 1s;
+	transform: rotateY( -15deg ) rotateX( 7deg ) scale( .9 );
+}
+
+.preview:hover {
+	box-shadow: 0px 0px 50px rgba( 0, 0, 0, 0.2 );
+	transform: rotateY( 0deg ) rotateX( 0deg ) scale( 1 );
+}
+
+.preview::before {
+	content: "PREVIEW";
+	display: block;
+	position: absolute;
+	top: 3em;
+	right: -3.71em;
+	z-index: 10;
+	font-weight: bold;
+	font-size: 12pt;
+	background: red;
+	color: white;
+	padding: .25em .5em;
+	transform: rotate( 90deg );
+}
+
+.preview:hover::after {
+	opacity: .3;
+	background-position: -150px 0;
+}
+
+.preview::after {
+	content: '';
+	background-image: url( /imgs/reflection.png );
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: .2;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 600px;
+	transition: all 1s;
+}
+
+.preview .profile {
+	width: 400px;
+	height: 400px;
+}
+
+.preview h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	font-size: 24pt;
+}
+
+.preview h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	margin-left: 15px;
+	margin-top: 0;
+	font-size: 18pt;
+}
+
+.preview p {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	margin-left: 15px;
+	font-size: 12pt;
+	max-width: 370px;
+	word-break: break-word;
+}

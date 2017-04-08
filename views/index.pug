@@ -1,0 +1,14 @@
+extends base.pug
+
+block prepend title
+	- title = "Capture Bot"
+
+block contents
+	.row
+		.col-md-8
+			.page-header
+				h1 Hello...
+			p This site will allow you to upload a photo and enter your details to print your photo for the members wall.
+			p
+				a( href="/capture" ).btn.btn-primary Get started
+		.col-md-4.example

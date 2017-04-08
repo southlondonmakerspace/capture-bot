@@ -20,8 +20,8 @@ jQuery( document ).ready( function() {
 	jQuery( "#firstname" ).keyup( name );
 	jQuery( "#lastname" ).keyup( name );
 
-	jQuery( "#discourse" ).keyup( function() {
-		jQuery( '.preview h2' ).text( '@' + jQuery( '#discourse').val() );
+	jQuery( "#username" ).keyup( function() {
+		jQuery( '.preview h2' ).text( '@' + jQuery( '#username').val() );
 	} );
 
 	jQuery( "#fact" ).keyup( function() {
